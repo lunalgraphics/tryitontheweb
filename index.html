@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Launcher | Lunal Graphics</title>
+        <link rel="icon" href="logo_cool.png" />
+    </head>
+    <body>
+        <iframe id="appembed" style="position: fixed; bottom: 0; left: 0; height: 100vh; width: calc(100vw - 345px); box-sizing: border-box; user-select: none; border: none;"></iframe>
+        <div style="width: 345px; height: 100vh; position: fixed; bottom: 0; right: 0; background-color: #EEEEEE; box-sizing: border-box; user-select: none; padding: 15px; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; white-space: pre-line; text-align: center; font-size: 16px;">
+            <b style="font-size: 24px;">Hi there!</b>
+
+            We put in a lot of effort to make free web versions of our apps.
+            Therefore, we'd appreciate it if you'd support us.
+
+             <a href="https://www.patreon.com/join/yikuans?" target="_blank"> <img src="https://tinyurl.com/2u8ffyce" alt="Become a Patron!" onmouseenter="this.src = `https://tinyurl.com/yc5f67nm`" onmouseleave="this.src = `https://tinyurl.com/2u8ffyce`" height="32"> </a> <br> 
+
+            Share us with your friends!
+            <div class="socialicons" style="white-space: normal;">
+                <a target="_blank" href="https://facebook.com/sharer/sharer.php?u=https%3A%2F%2Flunalgraphics.github.io"><img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/facebook.svg" height="25" /></a>
+                <a target="_blank" href="https://twitter.com/intent/tweet/?text=Really%20cool%20graphics%20apps%20and%20plugins&url=https%3A%2F%2Flunalgraphics.github.io"><img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/twitter.svg" height="25" /></a>
+                <a target="_blank" href="mailto:?subject=Really%20cool%20graphics%20apps%20and%20plugins&body=https%3A%2F%2Flunalgraphics.github.io"><img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/email.svg" height="25" /></a>
+                <a target="_blank" href="https://reddit.com/submit/?url=https%3A%2F%2Flunalgraphics.github.io&resubmit=true&title=Really%20cool%20graphics%20apps%20and%20plugins"><img src="https://raw.githubusercontent.com/edent/SuperTinyIcons/master/images/svg/reddit.svg" height="25" /></a>
+            </div>
+        </div>
+        <script>
+            var appsInfo = {
+                zeus: {
+                    embeduri: "https://yikuansun.github.io/lightning-experiment",
+                    title: "Zeus"
+                },
+                spriteReplicator: {
+                    embeduri: "https://yikuansun.github.io/sprite-replicator",
+                    title: "Sprite Replicator"
+                },
+                progenflares: {
+                    embeduri: "https://yikuansun.github.io/progenflares",
+                    title: "Progen Flares"
+                },
+                inferno: {
+                    embeduri: "https://lunalgraphics.github.io/inferno",
+                    title: "Inferno - Flame FX"
+                },
+                colortheater: {
+                    embeduri: "https://lunalgraphics.github.io/colortheater",
+                    title: "Color Theater"
+                },
+                superbloom: {
+                    embeduri: "https://lunalgraphics.github.io/glowrenderer/index.html",
+                    title: "SuperBloom"
+                },
+            };
+            var appID = location.hash.replace("#", "");
+            document.querySelector("#appembed").src = appsInfo[appID].embeduri;
+            document.querySelector("title").innerHTML = appsInfo[appID].title + " on the web | Lunal Graphics";
+        </script>
+        <script src="code.js"></script>
+    </body>
+</html>
